@@ -1,0 +1,161 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #E8F5E9, #A5D6A7, #81C784); /* Soft light gradient for the body background */
+    color: #333333; /* Dark text color for contrast */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(to right, #E8F5E9, #A5D6A7, #81C784); /* Light gradient for a clean, airy container */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* Soft shadow for subtle depth */
+    text-align: center;
+    border-radius: 12px;
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Glow on Hover or Focus */
+.container:hover,
+.container:focus-within {
+    box-shadow: 
+        0 12px 50px #00B0B9,
+        0 8px 50px #B39DDB, 
+        0 2px 50px #F5F5F5; /* Enhanced gradient-like shadow on hover */
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: transparent;
+    background-image: linear-gradient(to right, #6a71db, #3e9ab3, #82c4d7); /* Gradient with pastel tones of purple, teal, and blue */
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 25px #6a71db, 0 0 35px #3e9ab3, 0 0 45px #82c4d7; /* Neon-like glow for emphasis */
+}
+
+/* Input Styles */
+.todo-input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#todo-input {
+    padding: 15px;
+    width: 70%;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    outline: none;
+    background: linear-gradient(to right, #e7f2f9, #d0e5f3); /* Soft pastel gradient for the input field */
+    color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#todo-input:focus {
+    border-color: #57c7b6; /* Soft teal glow on focus */
+    box-shadow: 0 4px 12px rgba(87, 199, 182, 0.5); /* Soft glow effect */
+}
+
+/* Add Button Styles */
+#add-btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    margin-left: 15px;
+    background: linear-gradient(to right, #5f9ea0, #50b3a2, #6bb2b3); /* Soft teal to greenish gradient */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#add-btn:hover {
+    background: linear-gradient(to right, #58c8a5, #4fa59b, #66c7c6); /* Slightly brighter gradient on hover */
+    transform: translateY(-3px); /* Button lift effect */
+}
+
+#add-btn:active {
+    transform: translateY(1px); /* Button press effect */
+}
+
+/* To-Do List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 12px;
+    background: linear-gradient(to right, #f9f9f9, #eef4f7); /* Soft gradient for list items */
+    border: 2px solid transparent;
+    color: #333333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 10px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+    background: linear-gradient(to right, #cce9e4, #a5d4d3); /* Slightly darker gradient on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
+}
+
+button.remove {
+    background: none;
+    border: none;
+    color: #f08080; /* Soft red for remove button */
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button.remove:hover {
+    color: #ff6347; /* Brighter red on hover */
+}
+
+/* Theme Toggle Button */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #3e9ab3; /* Soft teal color for toggle button */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+    color: #82c4d7; /* Lighter cyan hover color */
+}
